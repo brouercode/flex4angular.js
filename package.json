@@ -1,0 +1,30 @@
+{
+	"name": "flex4angular",
+	"version": "0.1.0",
+	"description": "Angular Web Components based in Adobe Flex",
+	"keywords": [
+		"angular",
+		"directive",
+        "web components",
+        "adobe flex",
+        "html5",
+		"highcharts"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/brouercode/flex4angular.js.git"
+	},
+	"licenses": [{
+		"type": "MIT"
+	}],
+	"devDependencies": {
+		"grunt": "~0.4.2",
+		"grunt-contrib-jshint": "~0.6.3",
+        "jshint-stylish": "~0.1.4",
+		"grunt-contrib-concat": "~0.3.0",
+		"grunt-contrib-clean": "~0.5.0",
+		"grunt-contrib-uglify": "~0.2.2",
+		"matchdep": "~0.1.2"
+	},
+    "dependencies": {}
+}

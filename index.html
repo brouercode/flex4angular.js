@@ -6,46 +6,21 @@
       <title>Flex 4 AngularJS</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="author" content="Brouer CODE">
-
-      <!-- css -->
-      <!--<link href="assets/css/app.css" rel="stylesheet">-->
-
-      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-      <!--[if lt IE 9]>
-        <script src="vendor/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="vendor/respond/1.3.0/respond.min.js"></script>
-      <![endif]-->
-
-      <!-- favicon -->
-      <!--<link rel="shortcut icon" href="assets/img/favicon.ico">-->
-
     </head>
     <body data-ng-controller="fwMainController">
-
-        <fw-loading-view><span class="loading-activity"></fw-loading-view>
-        <!-- loagind app -->
-        <div class="loading_app" data-ng-hide="appLoaded">
-            <p style="text-align:center">
-                <img src="assets/img/loading.gif"><br>Carregando...
-            </p>
-        </div>
-
         <!-- Wrap all page content here -->
-        <div id="wrap">
-
-            <!-- navbar -->
-            <!--<div data-ng-show="currentUser" data-ng-include="'app/main/templates/headerView.html'"></div>-->
-
-            <!-- app content -->
-            <div class="ng-view"></div>  
-
-        </div>
-
-        <!-- footer -->
+        <div>
+        <fa-tabnavigator title='selectedIndex'>
+      <div title='Dados'>
+        Date: <br>
+        Currency: <br>
+        Number: <br>
+      </div>
+    </fa-tabnavigator>
+        </div>  
 
         <!-- javascript -->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.11/angular.min.js" />
-        <script src="js/app.min.js"></script>
+        <script src="dist/flex4angular.min.js"></script>
     </body>
 </html>

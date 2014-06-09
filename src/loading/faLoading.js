@@ -18,7 +18,7 @@ angular.module('flex4angular.loading', [])
 			}
 		};
 	}
-]);
+])
 
 /**
  * Diretiva que coloca uma camada de bloqueio na tela

@@ -1,4 +1,4 @@
-angular.module('flex4angular.util', [])
+angular.module('flex4angular.util.maxchar', [])
 /**
  * Diretiva para não permitir o usário digitar mais caracteres do que o permitido
  * EX:

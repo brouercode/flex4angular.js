@@ -64,11 +64,19 @@ module.exports = function(grunt) {
         src: '<%= concat.dist.dest %>',
         dest: '<%= path.dist %>/<%= pkg.name %>.min.js'
       }
+    },
+    less: {
+      options: {
+        paths: ['<%= path.src %>/']
+      },
+      files: {
+        '<%= path.dist %>/<%= pkg.name %>.css': '<%= path.src %>/<%= pkg.name %>.less'
+      }
     }
   });
-    
-  grunt.registerTask('buildMin', ['clean:dist','concat:dist','jshint','uglify:dist']);
-  grunt.registerTask('build', ['clean:dist','concat:dist','jshint']);
+  
+  grunt.registerTask('build', ['clean:dist','concat:dist','jshint','less']);
+  grunt.registerTask('buildMin', ['build','uglify:dist']);
   grunt.registerTask('default', ['buildMin']);
 
 };

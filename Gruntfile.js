@@ -66,11 +66,10 @@ module.exports = function(grunt) {
       }
     },
     less: {
-      options: {
-        paths: ['<%= path.src %>/']
-      },
-      files: {
-        '<%= path.dist %>/<%= pkg.name %>.css': '<%= path.src %>/<%= pkg.name %>.less'
+      development: {
+          files: {
+            '<%= path.dist %>/<%= pkg.name %>.css': '<%= path.src %>/<%= pkg.name %>.less'
+          }
       }
     }
   });

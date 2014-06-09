@@ -1,20 +1,20 @@
-angular.module("faSample").controller('DialogController', ['$scope', '$fwDialog',
-	function($scope, $fwDialog) {
+angular.module("faSample").controller('DialogController', ['$scope', '$faDialog',
+	function($scope, $faDialog) {
 
 		$scope.alert = function() {
-			$fwDialog.alert('texto alerta<br>teste<b>bold</b><br><br><br>aas<br><br>aasdasd', 'titulo alerta customizado', returnF);
+			$faDialog.alert('texto alerta', 'titulo alerta customizado', returnF);
 		};
 		$scope.error = function() {
-			$fwDialog.error('texto error<br>asd', null);
+			$faDialog.error('texto error', null);
 		};
 		$scope.information = function() {
-			$fwDialog.information('texto information', null);
+			$faDialog.information('texto information', null);
 		};
 		$scope.success = function() {
-			$fwDialog.success('texto success', null);
+			$faDialog.success('texto success', null);
 		};
 		$scope.confirm = function() {
-			$fwDialog.confirm('Deseja mostrar um alerta?', null, returnF);
+			$faDialog.confirm('Deseja mostrar um alerta?', null, returnF);
 		};
 		$scope.customized = function() {
 
@@ -22,11 +22,11 @@ angular.module("faSample").controller('DialogController', ['$scope', '$fwDialog'
 				label: 'Talvez',
 				action: 'SERA'
 			};
-			$fwDialog.customized('texto', 'title', [btSera, $fwDialog.btNO, $fwDialog.btCANCEL], returnF, $fwDialog.btNO);
+			$faDialog.customized('texto', 'title', [btSera, $faDialog.btNO, $faDialog.btCANCEL], returnF, $faDialog.btNO);
 		};
 
 		var returnF = function(action) {
-			if (action == $fwDialog.btYES.action)
+			if (action == $faDialog.btYES.action)
 				window.alert(action);
 		};
 	}

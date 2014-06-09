@@ -67,7 +67,8 @@ module.exports = function(grunt) {
     }
   });
     
-  grunt.registerTask('build', ['clean:dist','concat:dist','jshint','uglify:dist']);
-  grunt.registerTask('default', ['build']);
+  grunt.registerTask('buildMin', ['clean:dist','concat:dist','jshint','uglify:dist']);
+  grunt.registerTask('build', ['clean:dist','concat:dist','jshint']);
+  grunt.registerTask('default', ['buildMin']);
 
 };

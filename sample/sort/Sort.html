@@ -1,6 +1,13 @@
 <div data-ng-controller="SortController">
     <button ng-click="order(true)">Asc</button>
     <button ng-click="order(false)">Desc</button>
-    
-    
+
+
+    <table class="table table-bordered table-hover table-striped">
+        <tr data-ng-repeat="data in dataProvider" class="datagrid-row">
+            <td class="datagrid-cell">{{data.label}}
+            </td>
+        </tr>
+    </table>
+
 </div>

@@ -9,5 +9,6 @@ angular.module(
         'flex4angular.tabnavigator', 
         'flex4angular.breadcrumb',
         'flex4angular.loading',
+        'flex4angular.dialog',
         'flex4angular.panel'
     ]);

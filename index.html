@@ -11,6 +11,9 @@
     <link href="dist/flex4angular.css" rel="stylesheet">
     <!-- javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.js"></script>
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.min.js"></script>
+    <script src="https://rawgithub.com/angular-translate/bower-angular-translate/master/angular-translate.min.js"></script>
+    
     <script src="dist/flex4angular.min.js"></script>
     <script src="sample/sample.js"></script>
 </head>
@@ -46,6 +49,13 @@
                 <script src="sample/loading/LoadingController.js"></script>
             </div>
         </div>
+                
+        <div title="Dialog">
+            <div data-ng-include="'sample/dialog/Dialog.html'">
+                <script src="sample/dialog/DialogController.js"></script>
+            </div>
+        </div>
+        
           <div title="Tree">
             <div data-ng-include="'sample/tree/Tree.html'">
                 <script src="sample/tree/TreeController.js"></script>

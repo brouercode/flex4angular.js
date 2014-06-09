@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Brouer CODE">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-        <!-- javascript -->
+    <!-- javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.js"></script>
     <script src="dist/flex4angular.min.js"></script>
     <script src="sample/sample.js"></script>
@@ -17,13 +17,22 @@
 <body ng-app="faSample">
     <!-- Wrap all page content here -->
 
-    <div data-ng-include="'sample/viewstack/ViewStack.html'" >
-        <script src="sample/viewstack/ViewStackController.js"></script>
-    </div>
+    <fa-tabnavigator>
+        <div title="ViewStack">
+            <div data-ng-include="'sample/viewstack/ViewStack.html'">
+                <script src="sample/viewstack/ViewStackController.js"></script>
+            </div>
+        </div>
+        <div title="MaxChar">
+            <div data-ng-include="'sample/maxchar/MaxChar.html'">
 
+            </div>
+
+        </div>
+    </fa-tabnavigator>
     <div data-ng-include="'sample/panel/panel.html'" >
     </div>
-    
+
 </body>
 
 </html>

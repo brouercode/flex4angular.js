@@ -1,0 +1,59 @@
+<div class="container" ng-controller="LoadingController">
+    
+    <style>
+        .loading-activity {
+          display: block;
+          position: fixed;
+          z-index: 2000;
+          top: 3px;
+          right: 3px;
+          width: 10px;
+          height: 10px;
+          border: solid 2px transparent;
+          border-top-color: #29d;
+          border-left-color: #29d;
+          border-radius: 10px;
+          -webkit-animation: loading-spinner 400ms linear infinite;
+          -moz-animation: loading-spinner 400ms linear infinite;
+          -ms-animation: loading-spinner 400ms linear infinite;
+          -o-animation: loading-spinner 400ms linear infinite;
+          animation: loading-spinner 400ms linear infinite;
+        }
+
+        @-webkit-keyframes loading-spinner {
+          0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+          100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+        }
+        @-moz-keyframes loading-spinner {
+          0% { -moz-transform: rotate(0deg); transform: rotate(0deg); }
+          100% { -moz-transform: rotate(360deg); transform: rotate(360deg); }
+        }
+        @-o-keyframes loading-spinner {
+          0% { -o-transform: rotate(0deg); transform: rotate(0deg); }
+          100% { -o-transform: rotate(360deg); transform: rotate(360deg); }
+        }
+        @-ms-keyframes loading-spinner {
+          0% { -ms-transform: rotate(0deg); transform: rotate(0deg); }
+          100% { -ms-transform: rotate(360deg); transform: rotate(360deg); }
+        }
+        @keyframes loading-spinner {
+          0% { transform: rotate(0deg); transform: rotate(0deg); }
+          100% { transform: rotate(360deg); transform: rotate(360deg); }
+        }
+    </style>
+    
+    <fa-loading-view><span class="loading-activity"/></fa-loading-view>
+
+	<div class="panel panel-primary">
+	    <div class="panel-heading">loading</div>
+	    <div class="panel-body">
+			<button ng-click="showLoad()">Executar Loading</button>
+	    </div>
+	</div>
+
+	<button ng-click="hideLoad()"  ng-show="isLoading" class="btn btn-danger"
+		style="position: fixed;top: 50%;margin: 0px auto;left: 45%;z-index:9999">
+		Fechar Loading
+	</button>
+
+</div>

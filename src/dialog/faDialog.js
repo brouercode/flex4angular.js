@@ -1,3 +1,21 @@
+angular.module('flex4angular.dialog', ['pascalprecht.translate', 'ui.bootstrap'])
+
+.run(["$templateCache",
+	function($templateCache) {
+		$templateCache.put("template/framework/dialog.html",
+			"<div class=\"{{windowClass}}\">" +
+			"	<div class=\"modal-header\">" +
+			"		<h4 class=\"modal-title\">{{options.messageTitle | translate}}</h4>" +
+			"	</div>" +
+			"	<div class=\"modal-body\" ng-bind-html=\"toHTML(options.message)\"></div>" +
+			"	<div class=\"modal-footer\" id=\"footerModal\">" +
+			"		<span ng-repeat=\"button in options.buttons\" ng-click=\"action(button)\" class=\"btn btn-default\" " +
+			"			ng-class=\"{active : button == defaultButton}\" >{{button.label | translate}}</span>" +
+			"	</div>" +
+			"</div>");
+	}
+]);
+
 angular.module('flex4angular.dialog')
 /**
   Factory para exibição da caixa de dialogo
@@ -147,23 +165,5 @@ angular.module('flex4angular.dialog')
 			btCANCEL: btCANCEL,
 			btOK: btOK
 		};
-	}
-]);
-
-angular.module('framework.dialog', ['pascalprecht.translate', 'ui.bootstrap'])
-
-.run(["$templateCache",
-	function($templateCache) {
-		$templateCache.put("template/framework/dialog.html",
-			"<div class=\"{{windowClass}}\">" +
-			"	<div class=\"modal-header\">" +
-			"		<h4 class=\"modal-title\">{{options.messageTitle | translate}}</h4>" +
-			"	</div>" +
-			"	<div class=\"modal-body\" ng-bind-html=\"toHTML(options.message)\"></div>" +
-			"	<div class=\"modal-footer\" id=\"footerModal\">" +
-			"		<span ng-repeat=\"button in options.buttons\" ng-click=\"action(button)\" class=\"btn btn-default\" " +
-			"			ng-class=\"{active : button == defaultButton}\" >{{button.label | translate}}</span>" +
-			"	</div>" +
-			"</div>");
 	}
 ]);

@@ -7,5 +7,6 @@ angular.module(
         'flex4angular.util.sort', 
         'flex4angular.tabnavigator', 
         'flex4angular.breadcrumb',
+        'flex4angular.loading',
         'flex4angular.panel'
     ]);

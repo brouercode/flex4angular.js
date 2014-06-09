@@ -4,12 +4,11 @@ angular.module('flex4angular.util', [])
  * EX:
  *		<input type="text" class="form-control" data-fa-maxchar="4" />
  */
-.directive('faMaxChar',
+.directive('faMaxchar',
 	function() {
 		return {
-			require: 'ngModel',
-			link: function(scope, element, attrs, ngModelController) {
-				var maxlength = Number(attrs.fwMaxChar);
+			link: function(scope, element, attrs) {
+				var maxlength = Number(attrs.faMaxchar);
 				//controla o conteúdo ao usuário pressionar as teclas
 				element.bind('keypress', function(event) {
 					var el = event.target;

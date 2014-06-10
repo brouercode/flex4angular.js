@@ -2,32 +2,31 @@ angular.module("faSample").controller('DialogController', ['$scope', '$faDialog'
 	function($scope, $faDialog) {
 
 		$scope.alert = function() {
-			$faDialog.alert('texto alerta', 'titulo alerta customizado', returnF);
+			$faDialog.alert('alert text here', 'alert title customized');
 		};
 		$scope.error = function() {
-			$faDialog.error('texto error', null);
+			$faDialog.error('text error here');
 		};
 		$scope.information = function() {
-			$faDialog.information('texto information', null);
+			$faDialog.information('text information here');
 		};
 		$scope.success = function() {
-			$faDialog.success('texto success', null);
+			$faDialog.success('text success here');
 		};
 		$scope.confirm = function() {
-			$faDialog.confirm('Deseja mostrar um alerta?', null, returnF);
+			$faDialog.confirm('text confirmation here?');
 		};
 		$scope.customized = function() {
-
-			var btSera = {
-				label: 'Talvez',
-				action: 'SERA'
+			var btCustomized = {
+				label: 'i am not shure!',
+				action: 'Maybe'
 			};
-			$faDialog.customized('texto', 'title', [btSera, $faDialog.btNO, $faDialog.btCANCEL], returnF, $faDialog.btNO);
+			$faDialog.customized('text customized here, usage return function to show alert click button.', 
+                                 'title customized', [btCustomized, $faDialog.btNO, $faDialog.btCANCEL], 
+                                 returnF, $faDialog.btNO);
 		};
-
 		var returnF = function(action) {
-			if (action == $faDialog.btYES.action)
-				window.alert(action);
+			window.alert(action);
 		};
 	}
 ]);
